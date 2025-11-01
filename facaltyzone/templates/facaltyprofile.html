@@ -1,0 +1,73 @@
+{% extends 'findex.html' %}
+{% block body %}
+<div class="row p-0 bg-light">
+  
+    <div class="col-sm-12 ">
+       <table style="width:100%;">
+        <tr>
+          <th colspan="3"><h1 class="text-center p-5 text-info">View Profile</h1></th>
+        </tr>
+        <tr>
+          <td rowspan="11">
+            {% if f.image %}  
+            <img src="{{ f.image.url }}" alt="Current Image" class="img-fluid text-center" style="max-height:300px; max-width:260px; margin-left: 70px;">
+            {% endif %}
+          
+           </td>
+        </tr>
+        <tr>
+          <th>Id:</th>
+          <td>{{f.fid}}</td>
+          
+        
+        </tr>
+        <tr>
+          <th>name :</th>
+          <td>{{f.fname}}</td>
+        </tr>
+        <tr>
+          <th>Department :</th>
+          <td>{{f.department}}</td>
+        </tr>
+        <tr>
+          <th>Salary :</th>
+          <td>{{f.salary}}</td>
+        </tr>
+        <tr>
+          <th>Mobile :</th>
+          <td>{{f.mobile}}</td>
+        </tr>
+        <tr>
+          <th>Email :</th>
+          <td>{{f.email}}</td>
+        </tr>
+        <tr>
+          <th>Address :</th>
+          <td>{{f.address}}</td>
+        </tr>
+        <tr>
+          <th>Gender :</th>
+          <td>{{f.gender}}</td>
+        </tr>
+        <tr>
+          <th>Qualification :</th>
+          <td>{{f.qua}}</td>
+        </tr>
+        <tr>
+          <th>Experiance :</th>
+          <td>{{f.exp}}</td>
+        </tr>
+        <tr class="text-center">
+          <td colspan="2">
+            <button class="btn btn-primary"><a href="{%url 'facaltyzone:updatefacalty'%}" class="text-light text-decoration-none" align="center">UPDATE</a></button>
+          </td>
+        </tr>
+       </table>
+    </div>
+
+    
+</div>
+        {% endblock %}
+
+   
+   

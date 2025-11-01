@@ -1,0 +1,29 @@
+{% extends 'findex.html' %}
+{% block body%}
+<div class="row">
+ <form action="{%url 'facaltyzone:addstudent'%}" method="post"  class="form-group w-50 border mx-auto p-5 my-5" style="border-radius:30%;background-image:url('../static/img/bg4.jpg'); background-size:cover; box-shadow: 0 20px 25px black;">
+    {% csrf_token %}
+    <h2 class="text-center text-light">Add Student</h2>
+    <h4 class="text-center text-light">Registration Form</h4>
+    <input  type="text" placeholder="Enter Your Id " name="stdid" class="form-control text-light border-secondary bg-transparent" style="box-shadow: 0 10px 25px black;" required>
+    <br>
+    <input type="text"  placeholder="Enter Your Name " name="stdname" class="text-light form-control border-secondary bg-transparent" style="box-shadow: 0 10px 25px black;" required >
+    <br>
+    <select name="branch" class="form-control border-secondary form-select bg-transparent" style="box-shadow: 0 10px 25px black;" id="" required>
+        <option value="">---Choose Branch---</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="IC">IC</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electronics">Electronics</option>
+    </select><br>
+    <input type="date" name="dob" class="text-light form-control border-secondary form-select  bg-transparent" style="box-shadow: 0 10px 25px black;" >
+    <br>
+    <textarea name="about" placeholder="About the Student" class="form-control border-secondary form-select bg-transparent text-light" style="box-shadow: 0 10px 25px black;" id="" cols="30" rows="2"></textarea><br>
+    <br>
+    <input type="submit" value="Registration" class="btn btn-outline-secondary form-control" style="box-shadow: 0 10px 25px black;">
+    <br>
+    <br>  
+ </form>
+</div>
+{%endblock%}

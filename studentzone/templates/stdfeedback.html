@@ -1,0 +1,26 @@
+{%extends 'stdindex.html'%}
+{% block body%}
+<form action="{%url 'studentzone:stdfeed' %}" method="post" class="border bg-secondary border-warning w-75 p-5 rounded-3 mx-auto">
+    {% csrf_token %}
+    <h4 class="text-center">Feedback</h4>
+    <br><br>
+    <input type="text" placeholder="Enter Your Id" name="stdid" id="" class="form-control"><br>
+    <input type="text" placeholder="Enter Your Name" name="stdname" class="form-control"><br>
+    <select name="branch" id="" class="form-select"><br>
+        <option value="">---Choose Branch---</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="IC">IC</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electronics">Electronics</option>
+    </select><br>
+    <select name="feed" id="" class="form-select">
+        <option value="">--Select Feedback Type--</option>
+        <option value="feedback">Feedback</option>
+        <option value="Suggestion">Suggestion</option>
+        <option value="complain">Complain</option>
+    </select><br>
+    <textarea placeholder="Enter Your Message...." name="msg" id="" cols="30" rows="10" class="form-control"></textarea><br>
+    <input type="submit" value="Submit" class="form-control btn btn-primary">
+</form>
+{% endblock %}

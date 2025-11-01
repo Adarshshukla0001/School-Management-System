@@ -1,0 +1,28 @@
+{% extends 'adindex.html' %}
+{% block body%}
+
+<div class="row" >
+    <div class="col-sm-8">
+    <form action="{%url 'adminzone:facaltynfc' %}" method="post" style="background-color: antiquewhite; box-shadow: 20px 20px 20px black;" class="w-75 border border-primary mx-auto p-5 my-3">
+        {% csrf_token %}
+        <h3 class="text-center">Notifications</h3><br>
+        <input type="text" placeholder="Enter Id" class="form-control" name="nfcid"><br>
+        <textarea name="nfc" placeholder="Enter Notification" class="form-control" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Add Notification" class="btn btn-primary form-control">
+    </form>
+</div>
+<div class="col-sm-4">
+    <h3 class="text-center text-primary p-5">Sended Notifications</h3>
+    <table class="table table-secondary">
+{%for i in n%}
+<tr>
+    <th>{{i.nfcid}}</th>
+    <th>{{i.nfc}}</th>
+
+
+</tr>
+{%endfor%}
+    </table>
+    </div>
+
+{%endblock%}

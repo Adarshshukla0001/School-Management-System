@@ -1,0 +1,71 @@
+{%extends 'stdindex.html' %}
+{% block body%}
+<div class="row">
+<div class="col-sm-8">
+<form action="{%url 'studentzone:stdleave'%}" method="post" class="border-warning w-75 p-5 rounded-3 mx-auto bg-info">
+    {% csrf_token %}
+    <h3 class="text-center">Leave</h3><br><br>
+    <input type="text" placeholder="Enter Your Id" name="stdid" class="form-control"><br>
+    <input type="text" placeholder="Enter Your Name" name="stdname" class="form-control"><br>
+    <select name="branch" id="" class="form-select">
+        <option value="">---Choose Branch---</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="IC">IC</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electronics">Electronics</option>
+    </select><br>
+    <input type="text" placeholder="Enter Your Subject" name="subject" class="form-control"><br>
+    <input type="date" name="fr" class="form-control"><br>
+    <input type="date" name="to" class="form-control"><br>
+    <input type="text" placeholder="Number oF Days" name="frday" class="form-control"><br>
+    <textarea placeholder="Enter Your Message" name="msg" id="" cols="30" rows="10" class="form-control"></textarea><br>
+    <input type="submit" value="Submit" class="form-control btn btn-primary">
+
+</form>
+</div>
+<div class="col-sm-4">
+<h3 class="text-center text-primary p-5">View Leave Status</h3>
+<table class="table table-secondary">
+    <tr>
+       <th>Id</th>
+        <td>{{k.stdid}}</td>
+    </tr>
+    <tr>
+       <th>Name</th>
+        <td>{{k.stdname}}</td>
+    </tr>
+    <tr>
+       <th>Branch</th>
+        <td>{{k.branch}}</td>
+    </tr>
+    <tr>
+       <th>Subject</th>
+        <td>{{k.subject}}</td>
+    </tr>
+    <tr>
+       <th>From</th>
+        <td>{{k.fr}}</td>
+    </tr>
+    <tr>
+       <th>To</th>
+        <td>{{k.to}}</td>
+    </tr>
+    <tr>
+        <th>Reason</th>
+        <td>{{k.msg}}</td>
+    </tr>
+    
+     <tr>
+        <th>Status</th>
+        {%if k.status%}
+        <td>Accepted</td>
+        {%else%}
+        <td>Waiting</td>
+        {%endif%}
+        </tr>
+    
+</table>
+</div>
+</div>
+{% endblock %}

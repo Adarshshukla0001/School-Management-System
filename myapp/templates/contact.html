@@ -1,0 +1,16 @@
+{%extends 'index.html'%}
+{%block body%}
+<div class="row">
+<div class="col-sm-12">
+<form action="{%url 'contact'%}" method="post" class=" form-group p-5 w-75 mx-auto " style="border-radius:10%;background-image:url('../static/img/bg3.jpg');background-size:cover; box-shadow: 0 20px 25px black;">
+    {%csrf_token%}
+<h2 class="text-center p-5 text-info">Contact Us</h2>
+<input class="form-control" type="number" name="mobile" placeholder="Enter the mobile Number" required><br>
+<input class="form-control" type="text" name="name" placeholder="Enter the Name" required><br>
+<input class="form-control" type="email" name="email" placeholder="Enter the email" required><br>
+<textarea class="form-control" name="msg" id="" cols="30" rows="10" placeholder="Enter Your Message" required></textarea><br>
+<input class="form-control bg-primary" type="submit" value="submit">   
+</form>
+</div>
+</div>
+{%endblock%}

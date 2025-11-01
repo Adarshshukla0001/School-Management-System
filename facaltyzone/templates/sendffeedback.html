@@ -1,0 +1,25 @@
+{%extends 'findex.html'%}
+{% block body%}
+<form action="{%url 'facaltyzone:ffeed' %}" method="post" class="border bg-secondary border-warning w-75 p-5 rounded-3 mx-auto">
+    {% csrf_token %}
+    <h4 class="text-center">Feedback</h4>
+    <br><br>
+    <input type="text" placeholder="Enter Your Id" name="fid" id="" class="form-control"><br>
+    <input type="text" placeholder="Enter Your Name" name="fname" class="form-control"><br>
+    <select name="department" id="" class="form-select"><br>
+        <option value="">---Choose Department---</option>
+        <option value="Adminstrative Post">Adminstrative Post</option>
+        <option value="Teaching Post">Teaching Post</option>
+        <option value="Support And Services Post">Support And Services Post</option>
+        <option value="Technical Post">Technical Post </option>
+    </select><br>
+    <select name="feed" id="" class="form-select">
+        <option value="">--Select Feedback Type--</option>
+        <option value="feedback">Feedback</option>
+        <option value="Suggestion">Suggestion</option>
+        <option value="complain">Complain</option>
+    </select><br>
+    <textarea placeholder="Enter Your Message...." name="msg" id="" cols="30" rows="10" class="form-control"></textarea><br>
+    <input type="submit" value="Submit" class="form-control btn btn-primary">
+</form>
+{% endblock %}

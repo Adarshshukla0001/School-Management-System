@@ -1,0 +1,24 @@
+{% extends 'findex.html' %}
+{% block body%}
+
+<h2 class="text-center p-5 text-primary">View Facalty</h2>
+<table class="table table-secondary">
+ <tr>
+<th>Student id</th>
+<th>Student name</th>
+<th>Branch</th>
+<th>Date Of Birth</th>
+<th>Delete</th>
+</tr>
+{%for i in s%}
+<tr>
+<td>{{i.stdid}}</td>
+<td>{{i.stdname}}</td>
+<td>{{i.branch}}</td>
+<td>{{i.dob}}</td>
+<td><a href="{% url 'facaltyzone:deletestudent' i.stdid %}">Delete</a></td>
+</tr>
+{%endfor%}
+</table>
+
+{%endblock%}

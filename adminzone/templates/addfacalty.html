@@ -1,0 +1,29 @@
+{% extends 'adindex.html' %}
+{% block body%}
+<div class="row">
+ <form action="{%url 'adminzone:addfacalty'%}" method="post"  class="form-group w-50 border mx-auto p-5 my-5" style="border-radius:30%;background-image:url('../static/img/bg4.jpg'); background-size:cover; box-shadow: 0 20px 25px black;">
+    {% csrf_token %}
+    <h2 class="text-center text-warning">Add Facalty</h2>
+    <h4 class="text-center text-light">Registration Form</h4>
+    <input  type="text" placeholder="Enter Your Id " name="fid" class="form-control text-light border-secondary bg-transparent" style="box-shadow: 0 10px 25px black;" required>
+    <br>
+    <input type="text"  placeholder="Enter Your Name " name="fname" class="text-light form-control border-secondary bg-transparent" style="box-shadow: 0 10px 25px black;" required >
+    <br>
+    <select name="department" class="form-control border-secondary form-select bg-transparent" style="box-shadow: 0 10px 25px black;" id="" required>
+        <option value="">---Choose Department---</option>
+        <option value="Adminstrative Post">Adminstrative Post</option>
+        <option value="Teaching Post">Teaching Post</option>
+        <option value="Support And Services Post">Support And Services Post</option>
+        <option value="Technical Post">Technical Post </option>
+    </select>
+    <br>
+    <textarea name="about" placeholder="About the Facalty" class="form-control border-secondary form-select bg-transparent text-light" style="box-shadow: 0 10px 25px black;" id="" cols="30" rows="2"></textarea><br>
+    <br>
+    <input  placeholder="Enter Your Salary " type="number" name="salary" style="box-shadow: 0 10px 25px black;" class="form-control border-secondary form-select bg-transparent text-light" required>
+    <br>
+    <input type="submit" value="Registration" class="btn btn-outline-secondary form-control">
+    <br>
+    <br>`   
+ </form>
+</div>
+{%endblock%}

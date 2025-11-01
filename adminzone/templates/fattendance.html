@@ -1,0 +1,23 @@
+{% extends 'adindex.html' %}
+{% block body%}
+
+<h2 class="text-center p-5 text-primary">Attendence</h2>
+<table class="table table-secondary">
+<tr>
+<th>Facalty id</th>
+<th>Facalty name</th>
+<th>Department</th>
+<th>Attend</th>
+
+</tr>
+{%for i in e%}
+<tr>
+<td>{{i.fid}}</td>
+<td>{{i.fname}}</td>
+<td>{{i.department}}</td>
+<td><a href="{% url 'adminzone:present' i.fid%}">p</a></td>
+</tr>
+{%endfor%}
+</table>
+
+{%endblock%}

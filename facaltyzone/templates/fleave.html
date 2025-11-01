@@ -1,0 +1,70 @@
+{%extends 'findex.html' %}
+{% block body%}
+<div class="row">
+    <div class="col-sm-8">
+<form action="{%url 'facaltyzone:fleave'%}" method="post" class="border-warning w-75 p-5 rounded-3 mx-auto bg-info">
+    {% csrf_token %}
+    <h3 class="text-center">Leave</h3><br><br>
+    <input type="text" placeholder="Enter Your Id" name="fid" class="form-control"><br>
+    <input type="text" placeholder="Enter Your Name" name="fname" class="form-control"><br>
+    <select name="department" id="" class="form-select">
+        <option value="">---Choose Department---</option>
+        <option value="Adminstrative Post">Adminstrative Post</option>
+        <option value="Teaching Post">Teaching Post</option>
+        <option value="Support And Services Post">Support And Services Post</option>
+        <option value="Technical Post">Technical Post </option>
+    </select><br>
+    <input type="text" placeholder="Enter Your Subject" name="subject" class="form-control"><br>
+    <input type="date" name="fr" class="form-control"><br>
+    <input type="date" name="to" class="form-control"><br>
+    <input type="text" placeholder="Number oF Days" name="frday" class="form-control"><br>
+    <textarea placeholder="Enter Your Message" name="msg" id="" cols="30" rows="10" class="form-control"></textarea><br>
+    <input type="submit" value="Submit" class="form-control btn btn-primary">
+
+</form>
+</div>
+<div class="col-sm-4">
+<h3 class="text-center text-primary p-5">View Leave Status</h3>
+<table class="table table-secondary">
+    <tr>
+       <th>Id</th>
+        <td>{{l.fid}}</td>
+    </tr>
+    <tr>
+       <th>Name</th>
+        <td>{{l.fname}}</td>
+    </tr>
+    <tr>
+       <th>Department</th>
+        <td>{{l.department}}</td>
+    </tr>
+    <tr>
+       <th>Subject</th>
+        <td>{{l.subject}}</td>
+    </tr>
+    <tr>
+       <th>From</th>
+        <td>{{l.fr}}</td>
+    </tr>
+    <tr>
+       <th>To</th>
+        <td>{{l.to}}</td>
+    </tr>
+    <tr>
+        <th>Reason</th>
+        <td>{{l.msg}}</td>
+    </tr>
+    
+     <tr>
+        <th>Status</th>
+        {%if l.status%}
+        <td>Accepted</td>
+        {%else%}
+        <td>Waiting</td>
+        {%endif%}
+        </tr>
+    
+</table>
+</div>
+</div>
+{% endblock %}

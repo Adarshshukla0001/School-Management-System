@@ -1,0 +1,23 @@
+{% extends 'findex.html' %}
+{% block body%}
+
+<h2 class="text-center p-5 text-primary">Attendence</h2>
+<table class="table table-secondary">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Branch</th>
+<th>Attend</th>
+
+</tr>
+{%for i in e%}
+<tr>
+<td>{{i.stdid}}</td>
+<td>{{i.stdname}}</td>
+<td>{{i.branch}}</td>
+<td><a href="{% url 'facaltyzone:p' i.stdid%}">p</a></td>
+</tr>
+{%endfor%}
+</table>
+
+{%endblock%}

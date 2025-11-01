@@ -1,0 +1,24 @@
+{% extends 'adindex.html' %}
+{% block body%}
+
+    <h2 class="text-center p-5 text-primary"> View Feedback</h2>
+    <table class="table table-secondary">
+        <tr>
+       <th>Fid</th>
+       <th>Fname</th>
+       <th>Department</th>
+       <th>Feedtype</th>
+       <th>Massege</th>
+        </tr>
+       {% for i in f%}
+       <tr>
+       <td>{{i.fid}}</td>
+       <td>{{i.fname}}</td>
+       <td>{{i.department}}</td>
+       <td>{{i.feedtype}}</td>
+       <td>{{i.msg}}</td>
+       </tr>
+       {%endfor%}
+       </table>
+
+{% endblock %}

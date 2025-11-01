@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firoze Gandhi Polytechnic</title>
+    <link rel="stylesheet" href="{% static 'css/sunder.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="{%static 'js/bootstrap.bundle.js'%}"></script>
+
+    
+</head>
+<body>
+<!-- outer start -->
+<div class="container-fluid">
+<!-- header start -->
+<div class="row" style="background-image: url('../static/img/bg22.jpg'); background-size:cover;">
+<div class="col-sm-2">
+    <img src="{%static 'img/logo.png'%}" alt="" class="w-50">
+</div>
+<div class="col-sm-8">
+<h1 style="color: green;margin-top: 30px; font-weight: bold;"><span style="font-size: 60px;" >F</span>eroze <span style="font-size: 60px;" >G</span>andhi <span style="font-size: 60px;"  >P</span>olytechnic , <span style="font-size: 60px;"  >R</span>aebareli</span></h1>
+</div>
+<div class="col-sm-2 mt-5">
+    <button class="btn btn-danger"><a  href="{% url 'index'%}" class="text-light fw-bold  btn10 nav-link">Logout</a></button>
+  
+</div>
+</div>
+<!-- header end -->
+<!-- nav start -->
+<div class="row sticky-top">
+<div class="col-sm-12 p-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <h5 style="color:blueviolet; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"  class="navbar-brand">Facalty</h5> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link btn10 active" href="{%url 'facaltyzone:facaltyprofile'%}">Myprofile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn10 active"  href="{%url 'facaltyzone:addstudent'%}">Addstudent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn10 active" href="{%url 'facaltyzone:viewstudent'%}">View student</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link btn10 active" href="{%url 'facaltyzone:viewsal'%}">V.sallary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn10 active"  href="{%url 'facaltyzone:ffeed'%}">feedback</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link active btn10 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Attendance
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:studentattend'%}">Student Attendance</a></li>
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:viewstdattend'%}">View Student Attendance</a></li>
+              
+            </ul>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link active btn10 dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Notification
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:stdnfc'%}">Send Notification</a></li>
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:fnfc'%}">View Notification</a></li>
+            </ul>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link active btn10 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Leave
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:fleave'%}">My Leave</a></li>
+              <li><a class="dropdown-item btn10" href="{%url 'facaltyzone:leave'%}">Student Leave Request</a></li>
+            </ul>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+</div>
+<!-- nav end  -->
+<!-- slider start  -->
+<div class="row">
+  <div class="col-sm-8 p-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'img/slide1.jpg'%}" class="d-block w-100" height="500px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'img/slide2.jpg'%}" class="d-block w-100" height="500px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'img/slide3.jpg'%}" class="d-block w-100" height="500px" alt="...">
+        </div>
+        
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  </div>
+  <!-- notice start -->
+  <div class="col-sm-4 " style="border: 10px groove grey; height: 500px; background-color: aliceblue;">
+  <div class="row"><h2 class="text-center bg-secondary text-light" >NOTICE BOARD</h2></div>
+   <div class="row">
+    <marquee behavior="" direction="up" onmouseover="stop();" onmouseout="start();">
+    
+       
+      <li><ul><a href="">Lorem ipsum dolor sit amet consectetur.</a></ul></li>
+      <li><ul><a href="">Lorem ipsum dolor sit amet consectetur.</a></ul></li>
+      <li><ul><a href="">Lorem ipsum dolor sit amet consectetur.</a></ul></li>
+      <li><ul><a href="">Lorem ipsum dolor sit amet consectetur.</a></ul></li>
+      <li><ul><a href="">Lorem ipsum dolor sit amet consectetur.</a></ul></li>
+    </marquee>
+
+
+
+   </div>
+  </div>
+  <!-- notice end -->
+</div>
+<!-- slider end -->
+<!-- content start -->
+{% block body%}
+<!-- About start -->
+<div class="row" style="background-image: url('../static/img/bg18.avif'); background-size:cover; font-weight: bold;">
+  <div class="col-sm-12 mt-5">
+    <h3 style="text-align: center; color: brown;font-weight: bold;">WELCOME TO FEROZE GANDHI POLYTECHNIC RAEBARELI</h3>
+    </div>
+    <div class="col-sm-6 p-5">
+    <p>फ़िरोज़ गांधी पॉलिटेक्निक (FGP), रायबरेली की स्थापना 1975 में हुई थी। FGP रायबरेली को अखिल भारतीय तकनीकी शिक्षा परिषद (AICTE), नई दिल्ली द्वारा अनुमोदित किया गया है। फ़िरोज़ गांधी पॉलिटेक्निक एक सह-शिक्षा महाविद्यालय है।
+    </p>
+    <p>तकनीकी जनशक्ति की कमी को दूर करने के लिए, और "रायबरेली पॉलिटेक्निक एसोसिएशन" की छत्रछाया में, FGP की स्थापना की गई थी। एफजीपी विभिन्न इंजीनियरिंग विषयों में डिप्लोमा पाठ्यक्रम प्रदान करता है।
+    </p>
+    <p>एफपीजी डिप्लोमा पाठ्यक्रमों के लिए आवेदन करने से पहले, उम्मीदवारों को पात्रता मानदंडों का मिलान करना आवश्यक है। इसके अलावा, उम्मीदवारों के पास जेईईसीयूपी का वैध स्कोरकार्ड होना चाहिए। 
+    </p>
+    
+    
+    </div>
+    <div class="col-sm-6 p-5">
+    
+    
+      <img class="img-item"  src="{%static 'img/slide1.jpg'%}" alt="image os not showing" style="width: 450px;" >
+    </div>
+
+
+
+</div>
+<!-- About end -->
+<!-- card start -->
+<div class="row" style=" padding-left: 150px; background-color: transparent;">
+<div class="col-sm-3 mt-5 p-5" >
+  <div class="a" style="padding: 21px;"><i class="fa-solid fa-user-group fs-1"></i></div><br>
+  <h3 style="margin-left: 30px;">300<SUP>+</SUP></h3>
+
+  <p style="margin-left: 15px; font-weight: bold;">STUDENTS</p>
+</div>
+<div class="col-sm-3  mt-5 p-5">
+  <div class="a" style="padding: 21px;"> <i class="fa-solid fa-user-group fs-1"></i></div><br>
+  <h3 style="margin-left: 30px;">50<SUP>+</SUP></h3>
+  <p style="margin-left: 25px; font-weight: bold;">STAFF</p>
+</div>
+<div class="col-sm-3  mt-5 p-5">
+  <div class="a" style="padding: 21px;">   <i class="fa-solid fa-school fs-1"></i></div><br>
+  <h3 style="margin-left: 30px;">70<SUP>+</SUP></h3>
+  <p style="margin-left: 15px; font-weight: bold;">CLASS ROOMS</p>
+
+</div>
+<div class="col-sm-3  mt-5 p-5">
+  <div class="a" style="padding: 21px;"> <i class="fa-solid fa-school-flag fs-1"></i></div><br>
+  <h3 style="margin-left: 30px;">5<SUP>+</SUP></h3>
+  <p style="margin-left: 15px; font-weight: bold;">BRANCHES</p>
+
+</div>
+</div>
+<!-- card end -->
+<!-- principal massage start -->
+<div class="row" style="background-image: url('../static/img/bg18.avif'); background-size:cover; font-weight: bold;">
+  <div class="col-sm-12 p-5">
+    <h3 style="text-align: center; color: brown;font-weight: bold;">PRINCIPAL'S MESSAGE</h3>
+    </div>
+    <div class="col-sm-4 mt-5" style=" padding-left: 150px;">
+    
+    
+      <img class="img-item" src="{%static 'img/principal.jpg'%}" alt="image os not showing" height="200px" width="200px">
+    </div>
+    <div class="col-sm-8 p-5">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, optio vel? Omnis adipisci voluptatum deleniti obcaecati fuga, aspernatur, aliquid hic sit consequatur rem velit est quae quasi ipsa cumque saepe.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus dolorum ut iste dolore quae doloribus vero hic, illo pariatur!
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ratione error consequatur veritatis debitis quidem iusto harum nulla! Provident, quam.
+    </p>
+    
+    
+    </div>
+</div>
+<!-- principal massage end -->
+
+<!-- Gallery start -->
+<div class="row bg-light p-5" style="background-image:url('../static/img/bg8.jpg'); background-size:cover;">
+  <div class="col-sm-12 p-5">
+    <h2 style="text-align: center; color: brown;font-weight: bold; font-family: cursive;">---OUR GALLERY---</h2>
+
+
+  </div>
+<div class="col-sm-4">
+  <figure><img class="img-item" src="{%static 'img/g7.jpg'%}" alt="" height="250px" width="100%"></figure>
+</div>
+<div class="col-sm-4">
+  <img class="img-item" src="{%static 'img/g2.jpg'%}" alt="" height="250px" width="100%" >
+</div>
+<div class="col-sm-4">
+  <img class="img-item" src="{%static 'img/g6.jpg'%}" alt="" height="250px" width="100%">
+</div>
+
+ 
+
+
+</div>
+<!-- Gallery end -->
+{%endblock%}
+<!-- content end -->
+<!-- footer start -->
+<div class="row" style="background: linear-gradient(lightgrey,lightgrey);">
+    <div class="col-sm-12  p-5 ">
+      <div class="row row-cols-1 row-cols-md-4 g-3">
+        <div class="col">
+          <div class="card h-100  bg-light border-0" style="background: linear-gradient(lightgrey,lightgrey);" >
+            <div class="card-body">
+              <h5 class="card-title">ADDRESS</h5>
+              <p class="card-text">Feroze gandhi polytechnic RAEBARELI <br>pincode- 229001 <br>Dictrict- RAEBARELI <br>state- Uttar Pradesh </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100  bg-light border-0" style="background: linear-gradient(lightgrey,lightgrey);">
+            <div class="card-body">
+              <h5 class="card-title">FOLLOW ON US</h5>
+             <a href="">  <i class="fa-brands fa-instagram"></i> Instagram</a> <br><br>
+              <a href=""> <i class="fa-brands fa-facebook-f"></i> Facebook</a><br><br>
+              <a href=""> <i class="fa-brands fa-twitter"></i>Twiter</a> <br><br>
+              <a href=""> <i class="fa-brands fa-youtube"></i> Youtube</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100  bg-light border-0" style="background: linear-gradient(lightgrey,lightgrey);">
+            <div class="card-body">
+              <h5 class="card-title">Important Links</h5>
+              <h6></h6>
+              <a href="{% url 'studentlogin'%}">STUDENT LOGIN</a> <br><br>
+              <a href="{% url 'facaltylogin'%}">FACALTY LOGIN</a><br><br>
+              <a href="https://result.bteevaluation.co.in/even/main/rollno.aspx">CHECK RESULTS</a> <br><br>
+              <a href="https://urise.up.gov.in/student/register"> REGISTERATION URISE PORTAL</a> 
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <d/iv class="card h-100 bg-light border-0" style="background: linear-gradient(lightgrey,lightgrey );"> 
+            <div class="card-body">
+              <h5 class="card-title">FIND THE WAY</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.5505546545687!2d81.23855567495063!3d26.243789388517897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ba1571aaaaaab%3A0x7d1989f3c5a5982f!2sFeroze%20Gandhi%20Polytechnic!5e0!3m2!1sen!2sin!4v1696599682198!5m2!1sen!2sin"  height="200" style="border:0; width: 200px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <hr style="height: 3px;">
+        <div class="col-sm-10 mx-auto my-auto text-center">
+          <h5><span>&copy; All Copyright Reserved To <strong style="color:indigo">FEROZE GANDHI POLYECHNIC,RAEBARELI</strong>
+          || Designed By <strong style="color:indigo">ADARSH SHUKLA </strong></span></h3>
+
+        </div>
+      </div>
+      </div>
+<!-- footer end -->
+
+
+</div>
+<!-- outer end -->
+</body>
+</html>

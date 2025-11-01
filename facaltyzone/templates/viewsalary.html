@@ -1,0 +1,33 @@
+{%extends 'findex.html'%}
+{% block body%}
+
+<h2 class="text-center p-5 text-primary">VIEW SALARY</h2>
+<table class="table table-secondary ">
+    <tr>
+   <th>fid</th>
+   <td>{{k.fid}}</td>
+   </tr>
+
+   <tr>
+   <th>fname</th>
+   <td>{{k.fname}}</td>
+   </tr>
+   <tr>
+   <th>Department</th>
+   <td>{{k.department}}</td>
+   </tr>
+   <tr>
+   <th>Salary</th>
+   <td>{{k.salary}}</td>
+   </tr>
+   <tr>
+   <th>Status</th>
+   {%if k.status%}
+   <td>waiting</td>
+   {%else%}
+   <td>Received</td>
+   {%endif%}
+   </tr>
+   </table>
+
+{% endblock %}

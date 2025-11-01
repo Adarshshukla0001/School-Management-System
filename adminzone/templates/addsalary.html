@@ -1,0 +1,24 @@
+{% extends 'adindex.html' %}
+{% block body%}
+
+<h3 class="text-center text-primary p-5"> Add Salary</h3>
+<table class="table table-secondary">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Add</th>
+    </tr>
+    {% for i in e%}
+    <tr>
+        <td>{{i.fid}}</td>
+        <td>{{i.fname}}</td>
+        <td>{{i.department}}</td>
+        <td>{{i.salary}}</td>
+        <td><a href="{% url 'adminzone:addsal' i.fid%}">Add</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+{%endblock%}

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pym
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+venv.bak/
+.Python
+
+# Django
+*.log
+*.pot
+/local_settings.py
+/db.sqlite3
+/staticfiles/
+media/
+*.pyc
+
+# Environment files
+.env
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / frontend (if any)
+node_modules/
+npm-debug.log
+yarn-error.log

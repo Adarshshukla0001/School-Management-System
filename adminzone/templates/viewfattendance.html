@@ -1,0 +1,28 @@
+{% extends 'adindex.html' %}
+{% block body %}
+<h3 class="text-center p-5 text-primary">view Attendence</h3>
+<table class="table table-info ">
+<tr>
+<th>Facalty id</th>
+<th>Facalty name</th>
+<th>Department</th>
+<th>Date</th>
+<th>Attendence</th>
+
+</tr>
+{%for i in a%}
+<tr>
+<td>{{i.fid}}</td>
+<td>{{i.fname}}</td>
+<td>{{i.department}}</td>
+<td>{{i.date}}</td>
+{%if i.status%}
+<td><a href="{% url 'adminzone:pr' i.fid%}">Present</a></td>
+{%else%}
+<td><a href="{% url 'adminzone:ab' i.fid%}">Absent</a></td>
+{%endif%}
+</tr>
+{%endfor%}
+
+</table>
+{%endblock%}

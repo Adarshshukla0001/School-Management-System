@@ -1,0 +1,17 @@
+{%extends 'stdindex.html'%}
+{% block body%}
+<h2 class="text-center text-primary p-5">View Notification</h2>
+
+<table class="table table-secondary">
+<tr>
+<th>ID</th>
+<th>Massage</th>
+</tr>
+{%for i in x%}
+<tr>  
+   <td>{{i.nfcid}}</td> 
+   <td>{{i.nfc}}</td> 
+</tr>
+{%endfor%}
+</table>
+{% endblock %}
